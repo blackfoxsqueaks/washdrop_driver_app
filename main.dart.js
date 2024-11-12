@@ -91438,7 +91438,7 @@ return A.F(A.iV(),$async$jx)
 case 4:l=b
 l.D(0,"lastVisitedPage")
 l.D(0,"lastOrderId")
-n=A.fm("https://washdrop-invoice.vercel.app/api/washdrop_invoice",0,null)
+n=A.fm("https://cors-anywhere.herokuapp.com/https://washdrop-invoice.vercel.app/api/washdrop_invoice",0,null)
 j=t.N
 o=A.at(["Content-Type","application/json"],j,j)
 s=5
