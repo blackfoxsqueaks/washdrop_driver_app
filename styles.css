@@ -1,0 +1,70 @@
+  @font-face {
+    font-family: 'Ridley Grotesk';
+    src: url("https://getdrop.app/fonts/Ridley_Grotesk_Medium.woff") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Ridley Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  /* Header styling */
+  .header {
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* Main content centered below header */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .animation-container {
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  height: 260px;
+  margin-top: -250px;
+}
+
+.animation {
+  width: 130%;
+  height: auto;
+}
+  .loading-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 2vh;
+  }
+  .progress-bar-container {
+    width: 70%;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 2vh;
+  }
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #2667ff;
+    border-radius: 20px;
+    transition: width 1s ease;
+  }

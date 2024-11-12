@@ -1,83 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Carwash Anywhere!">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="WashDrop | Carwash Anywhere!">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta name="keywords" content="car app, vehicle, Drop, all-in-one, services, car management">
+  <meta name="author" content="Drop Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Drop App">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#346df8" media="(prefers-color-scheme: dark)">
 
-  <title>WashDrop | Carwash Anywhere!</title>
+  <!-- Open Graph Meta Tags (for better social sharing) -->
+  <meta property="og:title" content="Drop App">
+  <meta property="og:description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta property="og:image" content="https://getdrop.app/open-graph/open-graph-banner.png">
+  <meta property="og:url" content="https://app.getdrop.app">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drop App">
+  <meta name="twitter:description" content="Your All-In-One Car App for Car Wash, Repairs, and More...">
+  <meta name="twitter:image" content="https://getdrop.app/open-graph/open-graph-banner.png">
+
+  <!-- Title -->
+  <title>Drop App</title>
+
+  <!-- Manifest for PWA -->
   <link rel="manifest" href="manifest.json">
 
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script> <!-- Moved the defer attribute from this script -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> <!-- Moved the defer attribute from this script -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> <!-- Moved the defer attribute from this script -->
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- External Scripts -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew&loading=async&libraries=drawing,visualization,places" async></script>
 
-  <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew&libraries=drawing,visualization,places">
-  </script>
+  <script src="drop_init.js" ></script>
 
+  <!-- Firebase Scripts -->
   <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js';
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAS3pPMclVZ7cfAx10L7SFZhpfECuc22ew",
-      authDomain: "dropapp-ede3c.firebaseapp.com",
-      projectId: "dropapp-ede3c",
-      storageBucket: "dropapp-ede3c.appspot.com",
-      messagingSenderId: "1072229363531",
-      appId: "1:1072229363531:web:fcfd2ee6e78ee59566c2ce",
-      measurementId: "G-QREVZK8BY6"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const firestore = getFirestore();
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js';
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js';
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js';
   </script>
-
 </head>
+
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<!-- Header at the top -->
+<img class="header" src="assets/assets/WDHeader.png" alt="Drop Appbar">
+
+<!-- Main content centered below the header -->
+<div class="main-content">
+  <div class="animation-container">
+    <img class="animation" src="drop-loading-animation.gif" alt="Drop Logo Animation">
+  </div>
+  <div class="progress-bar-container">
+    <div id="progress-bar" class="progress-bar"></div>
+  </div>
+  <div id="loading-text" class="loading-text">Revving up engines</div>
+</div>
+
+<!-- Flutter Bootstrap Script -->
+<script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
